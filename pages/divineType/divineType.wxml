@@ -1,0 +1,37 @@
+<view class="divine-type-container">
+  <view class="divine-type-header">
+    <text class="divine-type-title">选择占卜类型</text>
+    <text class="divine-type-subtitle">请选择您想占卜的方向</text>
+  </view>
+
+  <view class="divine-type-grid">
+    <view class="divine-type-item" bindtap="selectType" data-type="love">
+      <view class="divine-type-icon-wrapper">
+        <text class="iconfont icon-love"></text>
+      </view>
+      <text class="divine-type-name">感情姻缘</text>
+    </view>
+    <view class="divine-type-item" bindtap="selectType" data-type="career">
+      <view class="divine-type-icon-wrapper">
+        <text class="iconfont icon-career"></text>
+      </view>
+      <text class="divine-type-name">事业财运</text>
+    </view>
+    <view class="divine-type-item" bindtap="selectType" data-type="health">
+      <view class="divine-type-icon-wrapper">
+        <text class="iconfont icon-health"></text>
+      </view>
+      <text class="divine-type-name">健康平安</text>
+    </view>
+    <view class="divine-type-item" bindtap="selectType" data-type="study">
+      <view class="divine-type-icon-wrapper">
+        <text class="iconfont icon-study"></text>
+      </view>
+      <text class="divine-type-name">学业考试</text>
+    </view>
+  </view>
+
+  <view class="divine-type-tips">
+    <text class="tips-text">选择类型后，请诚心发问</text>
+  </view>
+</view> 

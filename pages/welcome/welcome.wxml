@@ -1,0 +1,36 @@
+<view class="welcome-bg">
+  <view class="welcome-mask"></view>
+  <view class="welcome-main">
+    <view class="welcome-logo-container">
+      <image class="welcome-logo" src="/images/logo.png" mode="aspectFit"/>
+    </view>
+    <view class="welcome-title">甲骨文AI占卜</view>
+    <view class="welcome-slogan">探索古老智慧，预见未来方向</view>
+    
+    <view class="welcome-features">
+      <view class="feature-item">
+        <view class="feature-icon-wrapper">
+          <text class="iconfont icon-magic"></text>
+        </view>
+        <text>AI解签</text>
+      </view>
+      <view class="feature-item">
+        <view class="feature-icon-wrapper">
+          <text class="iconfont icon-scroll"></text>
+        </view>
+        <text>古风设计</text>
+      </view>
+      <view class="feature-item">
+        <view class="feature-icon-wrapper">
+          <text class="iconfont icon-share"></text>
+        </view>
+        <text>一键分享</text>
+      </view>
+    </view>
+
+    <view class="welcome-divider"></view>
+    <view class="welcome-team">卜算子团队 出品</view>
+    
+    <button class="welcome-btn" bindtap="startDivine">开始占卜</button>
+  </view>
+</view> 

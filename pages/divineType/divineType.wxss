@@ -1,0 +1,107 @@
+.divine-type-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f9e7c2 0%, #e2c9a0 100%);
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.divine-type-header {
+  text-align: center;
+  margin-bottom: 60rpx;
+  animation: fadeInDown 1s ease-out;
+}
+
+.divine-type-title {
+  display: block;
+  font-size: 40rpx;
+  font-family: "STKaiti", "KaiTi";
+  color: #4a2f0f;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+
+.divine-type-subtitle {
+  font-size: 28rpx;
+  color: #7a5a2f;
+  font-family: "STKaiti", "KaiTi";
+}
+
+.divine-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.divine-type-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20rpx;
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8rpx 24rpx rgba(181, 140, 96, 0.13);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.divine-type-item:nth-child(1) { animation-delay: 0.1s; }
+.divine-type-item:nth-child(2) { animation-delay: 0.2s; }
+.divine-type-item:nth-child(3) { animation-delay: 0.3s; }
+.divine-type-item:nth-child(4) { animation-delay: 0.4s; }
+
+.divine-type-item:active {
+  transform: scale(0.95);
+  box-shadow: 0 4rpx 12rpx rgba(181, 140, 96, 0.1);
+}
+
+.divine-type-icon-wrapper {
+  width: 100rpx;
+  height: 100rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(181, 140, 96, 0.1);
+}
+
+.divine-type-icon-wrapper .iconfont {
+  font-size: 48rpx;
+  color: #b58c60;
+}
+
+.divine-type-name {
+  font-size: 28rpx;
+  color: #5a3f1d;
+  font-family: "STKaiti", "KaiTi";
+  font-weight: bold;
+}
+
+.divine-type-tips {
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.tips-text {
+  font-size: 26rpx;
+  color: #7a5a2f;
+  font-family: "STKaiti", "KaiTi";
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 

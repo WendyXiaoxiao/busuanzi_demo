@@ -1,0 +1,10 @@
+<view class="share-container">
+  <canvas canvas-id="shareCanvas" class="share-canvas" style="width:{{previewWidth}}px;height:{{previewHeight}}px;"></canvas>
+  <view class="share-preview" style="width:{{previewWidth}}px;height:{{previewHeight}}px;">
+    <image wx:if="{{shareImage}}" class="share-image" src="{{shareImage}}" mode="aspectFit" style="width:100%;height:100%;"/>
+  </view>
+  <view class="share-btns">
+    <button class="gen-btn" bindtap="generateShareImage" loading="{{isGenerating}}">生成分享图</button>
+    <button class="save-btn" bindtap="saveImage" disabled="{{!shareImage}}">保存到相册</button>
+  </view>
+</view> 

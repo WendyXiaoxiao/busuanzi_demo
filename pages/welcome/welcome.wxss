@@ -1,0 +1,167 @@
+.welcome-bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #f9e7c2 0%, #e2c9a0 100%);
+  overflow: hidden;
+}
+.welcome-mask {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 250, 240, 0.85);
+  z-index: 1;
+}
+.welcome-main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 40rpx;
+}
+.welcome-logo-container {
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 36rpx;
+  border-radius: 50%;
+  background: #fffbe8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 32rpx rgba(181,140,96,0.13);
+  animation: logoFloat 3s ease-in-out infinite;
+}
+.welcome-logo {
+  width: 120rpx;
+  height: 120rpx;
+  animation: logoRotate 20s linear infinite;
+}
+.welcome-title {
+  font-size: 48rpx;
+  font-family: "STKaiti", "KaiTi";
+  color: #4a2f0f;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+  letter-spacing: 4rpx;
+  animation: fadeInDown 1s ease-out;
+}
+.welcome-slogan {
+  font-size: 28rpx;
+  color: #a88a5a;
+  margin-bottom: 36rpx;
+  font-family: "STKaiti", "KaiTi";
+  animation: fadeInUp 1s ease-out;
+}
+.welcome-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 36rpx;
+  margin-bottom: 40rpx;
+  animation: fadeIn 1.5s ease-out;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.feature-item:active {
+  transform: scale(0.95);
+}
+.feature-icon-wrapper {
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12rpx;
+  box-shadow: 0 4rpx 16rpx rgba(181, 140, 96, 0.1);
+}
+.feature-icon-wrapper .iconfont {
+  font-size: 40rpx;
+  color: #b58c60;
+}
+.feature-item text {
+  font-size: 24rpx;
+  color: #7a5a2f;
+  font-family: "STKaiti", "KaiTi";
+}
+.welcome-divider {
+  width: 60%;
+  height: 2rpx;
+  background: linear-gradient(90deg, #e2c9a0 0%, #fff 100%);
+  margin: 32rpx 0 18rpx 0;
+  border-radius: 2rpx;
+  opacity: 0.5;
+  animation: expandWidth 1s ease-out;
+}
+.welcome-team {
+  font-size: 26rpx;
+  color: #a88a5a;
+  margin-bottom: 60rpx;
+  letter-spacing: 2rpx;
+  animation: fadeIn 2s ease-out;
+}
+.welcome-btn {
+  width: 320rpx;
+  height: 80rpx;
+  background: linear-gradient(90deg, #d8b384 0%, #b58c60 100%);
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  font-family: "STKaiti", "KaiTi";
+  font-weight: bold;
+  box-shadow: 0 8rpx 24rpx rgba(181, 140, 96, 0.18);
+  animation: welcomePulse 1.8s infinite;
+  transition: transform 0.3s ease;
+}
+.welcome-btn:active {
+  transform: scale(0.95);
+}
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10rpx); }
+}
+@keyframes logoRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 60%; }
+}
+@keyframes welcomePulse {
+  0% { box-shadow: 0 8rpx 24rpx rgba(181, 140, 96, 0.18);}
+  50% { box-shadow: 0 16rpx 36rpx rgba(181, 140, 96, 0.28);}
+  100% { box-shadow: 0 8rpx 24rpx rgba(181, 140, 96, 0.18);}
+} 

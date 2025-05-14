@@ -1,0 +1,70 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 半透明遮罩，增强前景可读性 -->
+  <view class="overlay" />
+
+  <!-- 内容卡片 -->
+  <view class="card">
+    <!-- 标题 -->
+    <view class="title-section">
+      <image class="title-icon" src="../../images/scroll-icon.png" mode="aspectFit" />
+      <text class="title-text">甲骨文占卜</text>
+    </view>
+
+    <!-- 示例问题区 -->
+    <view class="examples-section">
+      <view class="examples-title">参考问题</view>
+      <view class="examples-grid">
+        <view 
+          wx:for="{{examples}}" 
+          wx:key="*this" 
+          class="example-item"
+          bindtap="useExample"
+          data-text="{{item}}"
+        >
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+    <view class="divider"></view>
+
+    <!-- 问题输入区 -->
+    <view class="input-section {{userQuery.length ? 'compact' : ''}}">
+      <input
+        class="question-input"
+        placeholder="例如：我今年能脱单吗？"
+        bindinput="handleInput"
+        value="{{userQuery}}"
+        maxlength="40"
+      />
+    </view>
+
+    <!-- 提交按钮 -->
+    <view class="button-section">
+      <button
+        class="submit-btn {{isLoading ? 'loading' : ''}}"
+        bindtap="submitQuery"
+        disabled="{{isLoading}}"
+      >
+        <block wx:if="{{!isLoading}}">占卜一下</block>
+        <block wx:else>
+          <image class="loading-icon" src="../../images/loading.gif" mode="aspectFit" />
+          <text>占卜中，请稍候...</text>
+        </block>
+      </button>
+    </view>
+
+    <!-- 签文展示 -->
+    <view wx:if="{{divinationResult}}" class="result-card">
+      <image class="result-decoration top-left" src="../../images/decoration-tl.png" mode="aspectFit"/>
+      <image class="result-decoration top-right" src="../../images/decoration-tr.png" mode="aspectFit"/>
+      <image class="result-decoration bottom-left" src="../../images/decoration-bl.png" mode="aspectFit"/>
+      <image class="result-decoration bottom-right" src="../../images/decoration-br.png" mode="aspectFit"/>
+      <text class="result-text">{{divinationResult}}</text>
+    </view>
+    <view wx:if="{{divinationResult}}" class="share-btn-section">
+      <button class="share-btn" bindtap="toShare">去分享</button>
+    </view>
+  </view>
+</view>
